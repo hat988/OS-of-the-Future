@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>OS of the Future - Advanced</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/build/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/howler@2.2.3/dist/howler.min.js"></script>
+    <link rel="stylesheet" href="style.css">>
+
+</head>
+<body>
+    <div id="boot-screen">
+        <div id="boot-logo"><i class="fas fa-atom"></i></div>
+        <div id="boot-progress"><div id="boot-progress-bar"></div></div>
+        <div id="boot-text">Initializing OS of the Future...</div>
+    </div>
+
+    <div id="shutdown-screen"><div id="shutdown-text">Shutting down...</div></div>
+
+    <canvas id="background-canvas"></canvas>
+
+    <div id="desktop"> </div>
+
+    <div id="dock-container">
+        <div class="dock-item" data-app="file-explorer"><i class="fas fa-folder"></i><span class="tooltip">File Explorer</span><div class="dot-indicator"></div></div>
+        <div class="dock-item" data-app="media-player"><i class="fas fa-music"></i><span class="tooltip">Media Player</span><div class="dot-indicator"></div></div>
+        <div class="dock-item" data-app="browser"><i class="fas fa-globe"></i><span class="tooltip">Web Browser</span><div class="dot-indicator"></div></div>
+        <div class="dock-item" data-app="terminal"><i class="fas fa-terminal"></i><span class="tooltip">Terminal</span><div class="dot-indicator"></div></div>
+        <div class="dock-item" data-app="neural-network"><i class="fas fa-brain"></i><span class="tooltip">Neural Network</span><div class="dot-indicator"></div></div>
+    </div>
+
+    <div id="taskbar">
+        <div id="start-menu-btn"><i class="fas fa-rocket"></i></div>
+        <div id="taskbar-apps"> </div>
+        <div id="system-tray">
+            <div id="battery-indicator"><i class="fas fa-battery-three-quarters"></i><span>85%</span></div>
+            <div id="clock">12:00 PM <div id="timezone-selector"><h3>Select Timezone</h3></div></div>
+            <div class="power-icon"><i class="fas fa-power-off"></i>
+                <div id="power-menu">
+                    <div class="power-option" data-action="restart"><i class="fas fa-sync"></i><span>Restart</span></div>
+                    <div class="power-option" data-action="sleep"><i class="fas fa-moon"></i><span>Sleep</span></div>
+                    <div class="power-option" data-action="shutdown"><i class="fas fa-power-off"></i><span>Shutdown</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="start-menu">
+        <div class="start-menu-header"><input type="text" class="start-menu-search" placeholder="Search apps..."></div>
+        <div class="start-menu-apps">
+            <div class="start-menu-app" data-app="file-explorer"><i class="fas fa-folder-open"></i><span>Explorer</span></div>
+            <div class="start-menu-app" data-app="media-player"><i class="fas fa-play-circle"></i><span>Player</span></div>
+            <div class="start-menu-app" data-app="browser"><i class="fab fa-firefox-browser"></i><span>Browser</span></div>
+            <div class="start-menu-app" data-app="terminal"><i class="fas fa-laptop-code"></i><span>Terminal</span></div>
+            <div class="start-menu-app" data-app="neural-network"><i class="fas fa-project-diagram"></i><span>Neural Net</span></div>
+            <div class="start-menu-app" data-app="settings"><i class="fas fa-cog"></i><span>Settings</span></div>
+            <div class="start-menu-app" data-app="calculator"><i class="fas fa-calculator"></i><span>Calculator</span></div>
+            <div class="start-menu-app" data-app="calendar"><i class="fas fa-calendar-alt"></i><span>Calendar</span></div>
+        </div>
+    </div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
